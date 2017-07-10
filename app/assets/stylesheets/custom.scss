@@ -13,9 +13,9 @@ textarea {
 }
 .center {
     text-align: center;
-  }
-.center h1 {
-  margin-bottom: 10px;
+ h1 {
+   margin-bottom: 10px;
+ }
 }
 /* typography */
 //添加一些精美的文字排版样式
@@ -55,3 +55,22 @@ p{
     color: #fff;
     text-decoration: none;
   }
+//添加页脚css样式
+/* footer */
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+footer a { color: #555;
+}
+footer a:hover { color: #222;
+}
+footer small { float: left;
+}
+footer ul {
+  float: right; list-style: none;
+}
+footer ul li { float: left; margin-left: 15px;
+}
