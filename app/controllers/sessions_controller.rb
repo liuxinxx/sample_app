@@ -18,6 +18,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-
+    #退出当前用户
+    log_out
+    #重定向到首页
+    redirect_to root_url
   end
 end

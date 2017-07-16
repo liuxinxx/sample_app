@@ -13,4 +13,9 @@ module SessionsHelper
   def logged_in?
     !current_user.nil?
   end
+  #退出当前用户
+  def log_out
+    session.delete(:user_id)
+    @current_user = nil
+  end
 end
