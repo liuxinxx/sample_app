@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+       log_in @user
       #闪现消息
       flash[:success] = "Welcome to the Sample App!"
       #重定向

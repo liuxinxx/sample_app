@@ -13,7 +13,7 @@ class UserTest < ActiveSupport::TestCase
   end
   # 属性存在性验证
   test "name should be present" do
-    @user.name = "    "
+    @user.name = " "
     assert_not @user.valid?
   end
 
