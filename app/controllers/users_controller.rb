@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      #闪现消息
+      flash[:success] = "Welcome to the Sample App!"
+      #重定向
+      redirect_to @user
       # 处理注册成功的情况
     else
       render 'new'
