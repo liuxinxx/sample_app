@@ -29,6 +29,7 @@ module SessionsHelper
   #退出当前用户
   def log_out
     session.delete(:user_id)
+    forget(current_user)
     @current_user = nil
   end
 
@@ -39,5 +40,14 @@ module SessionsHelper
     cookies.permanent.signed[:user_id] = user.id
     cookies.permanent[:remember_token] = user.remember_token
   end
-
+  #忘记用户
+  def forget
+    update_attribute(:remember_digest,nil)
+  end
+  # 忘记持久会话
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
 end
