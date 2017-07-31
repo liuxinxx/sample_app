@@ -22,6 +22,8 @@ class UsersController < ApplicationController
     end
   end
   private
+
+    #健壮参数
     def user_params
       params.require(:user).permit(:name,:email,:password,
                                     :password_confirmation)
