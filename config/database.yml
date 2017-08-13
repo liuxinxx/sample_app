@@ -25,7 +25,8 @@ production:
   host: localhost
   adapter: postgresql
   encoding: utf8
-  database: samlpe_production
+  
+  database: samlpe_app_production
   pool: 5
   username: <%= ENV['APPNAME_DATABASE_USER'] %>
   password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
